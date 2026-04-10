@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# IDs
+.gemini/
+.idea/
+.vscode/
+
+# Project specific
+out.txt
+pip_out.txt
+*.log
+pose_landmarker_lite.task
