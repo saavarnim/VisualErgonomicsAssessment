@@ -32,7 +32,7 @@ class CalibrationState:
         Checks if the current ear distance is significantly larger than the calibrated distance,
         which indicates leaning closer to the screen.
         """
-        if not self.is_calibrated:
+        if not self.is_calibrated or not current_keypoints:
             return False
 
         l_ear = current_keypoints.get('left_ear')

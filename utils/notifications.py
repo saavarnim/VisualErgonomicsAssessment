@@ -18,6 +18,10 @@ class PostureNotifier:
         if current_state == "Fatigued":
             if current_time - self.last_notification_time > self.cooldown_seconds:
                 try:
+                    import winsound
+                    # Play an audible warning tone (Frequency: 1000Hz, Duration: 500ms)
+                    winsound.Beep(1000, 500)
+                    
                     notification.notify(
                         title="Posture Alert!",
                         message="You have been in a poor posture for too long. Please sit up straight and relax your shoulders.",
